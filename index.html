@@ -2,6 +2,9 @@
 <html>
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>做我女朋友好不好</title>
   <style>
     body {
@@ -20,13 +23,23 @@
     }
 
     .main {
+      font-size: 14px;
       margin: 0 auto;
-      height: 150px;
-      width: 500px;
+      width: 80%;
+      height: 200px;
+      max-width: 800px;
+    }
+
+    .main h1 {
+      font-size: 18px;
+    }
+
+    .left {
+      float: left;
     }
 
     .pic {
-      width: 150px;
+      width: 40%;
       height: auto;
       float: right;
     }
@@ -35,9 +48,11 @@
 
 <body>
   <div class="main">
+    <div class="left">
+      <p>小姐姐我观察你很久了</p>
+      <h1>做我女朋友好不好</h1>
+    </div>
     <img class="pic" src="1.jpg">
-    <p>小姐姐我观察你很久了</p>
-    <h1>做我女朋友好不好</h1>
   </div>
   <div class="button-box">
     <button id="ok">好</button>
@@ -64,7 +79,7 @@
   var l = arr.length;
   var i = 0;
   function getmsg() {
-    if (i > l-1) { i = 0 }
+    if (i > l - 1) { i = 0 }
     return arr[i++]
   }
 
