@@ -7,8 +7,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>做我女朋友好不好</title>
   <style>
+    a:link, a:visited, a:hover, a:active {
+      text-decoration: none;
+      color: #333;
+    }
+
     body {
-      padding: 20px;
+      margin: 20px;
+      box-sizing: border-box;
     }
 
     button {
@@ -27,7 +33,7 @@
       margin: 0 auto;
       width: 80%;
       height: 200px;
-      max-width: 800px;
+      max-width: 500px;
     }
 
     .main h1 {
@@ -42,6 +48,15 @@
       width: 40%;
       height: auto;
       float: right;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 0.5rem;
+      width: 100%;
+      margin-left: 50%;
+      left: -50%;
+      text-align: center;
     }
   </style>
 </head>
@@ -58,7 +73,13 @@
     <button id="ok">好</button>
     <button id="no">不好</button>
   </div>
-  <!-- <a href="https://www.zkl2333.com">zkl2333</a> -->
+  <footer>
+    <b>©</b>
+    <b>zkl2333 2018</b>
+    <br>
+    <a href="http://www.miitbeian.gov.cn">浙ICP备17004361号-1</a>
+    <!-- 遵纪守法好公民 -->
+  </footer>
 </body>
 
 <script>
@@ -82,11 +103,6 @@
     if (i > l - 1) { i = 0 }
     return arr[i++]
   }
-
-  // function sendNum(arr) {
-  //   return arr[Math.floor(Math.random() * arr.length)];
-  // }
-
 
 </script>
 
