@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>做我女朋友好不好</title>
+  <style>
+    body {
+      padding: 20px;
+    }
+
+    button {
+      width: 70px;
+      height: 50px;
+      margin: 0 10%;
+    }
+
+    .button-box {
+      margin: 0 auto;
+      text-align: center
+    }
+
+    .main {
+      margin: 0 auto;
+      height: 150px;
+      width: 500px;
+    }
+
+    .pic {
+      width: 150px;
+      height: auto;
+      float: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <img class="pic" src="1.jpg">
+    <p>小姐姐我观察你很久了</p>
+    <h1>做我女朋友好不好</h1>
+  </div>
+  <div class="button-box">
+    <button id="ok">好</button>
+    <button id="no">不好</button>
+  </div>
+  <!-- <a href="https://www.zkl2333.com">zkl2333</a> -->
+</body>
+
+<script>
+  const clickOk = document.querySelector('#ok');
+  const clickNo = document.querySelector('#no');
+
+  console.log(clickOk);
+
+  clickOk.onclick = function () {
+    alert("ok");
+  }
+
+  clickNo.onclick = function () {
+    alert(getmsg());
+  }
+
+  var arr = ["房子写你名", "保大", "我妈会游泳", "饭我做", "菜我烧", "衣服我洗", "家务我全包"];
+  var l = arr.length;
+  var i = 0;
+  function getmsg() {
+    if (i > l-1) { i = 0 }
+    return arr[i++]
+  }
+
+  // function sendNum(arr) {
+  //   return arr[Math.floor(Math.random() * arr.length)];
+  // }
+
+
+</script>
+
+</html>
