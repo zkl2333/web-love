@@ -85,12 +85,6 @@
         <label for="no">点击no显示的文字</label>
         </br>
         <div id="input">
-            <input type="text" value="房子写你名" class="no">
-            </br>
-            <input type="text" value="保大" class="no">
-            </br>
-            <input type="text" value="我妈会游泳" class="no">
-            </br>
             <input type="text" value="饭我做" class="no">
             </br>
             <input type="text" value="菜我烧" class="no">
@@ -144,7 +138,7 @@
             }
             console.log(result);
             var jsonStr = encodeURI(JSON.stringify(result));
-            str = '</br>你的链接:</br><a class="but" href="./index.html?' + jsonStr + ' " target="_blank">点击跳转并分享</a>';
+            str = '</br>你的链接:</br><a class="but" href="./index.html?' + jsonStr + ' " target="_blank">点击这里跳转并分享,直接复制链接容易失败</a>';
             document.getElementById("link").innerHTML = str;
             return JSON.stringify(result);
         }
