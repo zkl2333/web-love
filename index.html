@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-cmn-Hans">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>做我女朋友好不好</title>
   <style>
-    a:link, a:visited, a:hover, a:active {
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
       text-decoration: none;
       color: #333;
     }
@@ -31,6 +34,7 @@
     .main {
       font-size: 14px;
       margin: 0 auto;
+      margin-top: 20vh;
       width: 80%;
       height: 200px;
       max-width: 500px;
@@ -60,13 +64,49 @@
       text-align: center;
     }
   </style>
+  <script>
+    var ok = "那你就是我家小猪猪了~";
+
+    var p = "小姐姐我关注你很久了~";
+
+    var h1 = "做我女朋友好吗~";
+
+    var no = ["房子写你名", "保大", "我妈会游泳", "饭我做", "菜我烧", "衣服我洗", "家务我全包"];
+
+    if (window.location.search !== "") {
+      search = decodeURI(window.location.search.slice(1));
+    };
+    var jsonStr = encodeURI(search);
+    if (decodeURI(jsonStr)) {
+      var result = JSON.parse(decodeURI(jsonStr));
+      console.log(jsonStr);
+      console.log(result.p);
+    }
+
+    if (result.no != undefined) {
+      no = result.no;
+    };
+    if (result.ok != undefined) {
+      ok = result.ok;
+    };
+    if (result.p != undefined) {
+      p = result.p;
+    };
+    if (result.h1 != undefined) {
+      h1 = result.h1;
+    };
+  </script>
 </head>
 
 <body>
   <div class="main">
     <div class="left">
-      <p>小姐姐我观察你很久了</p>
-      <h1>做我女朋友好不好</h1>
+      <p>
+        <script>document.write(p)</script>
+      </p>
+      <h1>
+        <script>document.write(h1)</script>
+      </h1>
     </div>
     <img class="pic" src="1.jpg">
   </div>
@@ -76,7 +116,8 @@
   </div>
   <footer>
     <b>©</b>
-    <b><a href="http://www.zkl2333.com">zkl2333</a> 2018</b>
+    <b>
+      <a href="http://www.zkl2333.com">zkl2333</a> 2018</b>
     <br>
     <a href="http://www.miitbeian.gov.cn">浙ICP备17004361号-1</a>
     <!-- 遵纪守法好公民 -->
@@ -87,20 +128,18 @@
   const clickOk = document.querySelector('#ok');
   const clickNo = document.querySelector('#no');
 
-  console.log(clickOk);
-
   clickOk.onclick = function () {
-    alert("那你就是我家小猪猪了~");
+    alert(ok);
   }
 
   clickNo.onclick = function () {
-    alert(getmsg());
+    alert(getmsg(no));
   }
 
-  var arr = ["房子写你名", "保大", "我妈会游泳", "饭我做", "菜我烧", "衣服我洗", "家务我全包"];
-  var l = arr.length;
+  var l = no.length;
   var i = 0;
-  function getmsg() {
+
+  function getmsg(arr) {
     if (i > l - 1) { i = 0 }
     return arr[i++]
   }
