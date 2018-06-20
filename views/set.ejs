@@ -120,12 +120,12 @@
         }
 
         but.onclick = function () {
-            var p = document.getElementById("p").value;
-            var h1 = document.getElementById("h1").value;
-            var ok = document.getElementById("ok").value;
+            var p = escape(document.getElementById("p").value);
+            var h1 = escape(document.getElementById("h1").value);
+            var ok = escape(document.getElementById("ok").value);
             var no = new Array();
             for (var i = 0; i < document.querySelectorAll(".no").length; i++) {
-                var v = document.querySelectorAll(".no")[i].value;
+                var v = escape(document.querySelectorAll(".no")[i].value);
                 if (v !== "") {
                     no.push(v);
                 }

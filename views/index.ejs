@@ -81,13 +81,13 @@
       no = result.no;
     };
     if (result.ok != undefined) {
-      ok = result.ok;
+      ok = unescape(result.ok);
     };
     if (result.p != undefined) {
-      p = result.p;
+      p = unescape(result.p);
     };
     if (result.h1 != undefined) {
-      h1 = result.h1;
+      h1 = unescape(result.h1);
     };
   </script>
 </head>
@@ -127,7 +127,7 @@
   }
 
   clickNo.onclick = function () {
-    alert(getmsg(no));
+    alert(unescape(getmsg(no)));
   }
 
   var l = no.length;
