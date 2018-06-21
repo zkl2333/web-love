@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
-app.get(["/,", "/index.html"], function (req, res) {
+app.get(["/", "/index.html"], function (req, res) {
     res.render("index.ejs", {
         json: 'null'
     });
