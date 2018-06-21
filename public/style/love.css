@@ -1,0 +1,87 @@
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: #333;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    position: relative;
+}
+
+button:hover {
+    color: #F77B83;
+    border-color: #F77B83;
+    outline-style: none;
+}
+
+button {
+    width: 100px;
+    margin: 20px 5vw;
+    display: inline-block;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #444;
+    letter-spacing: 1px;
+    font-size: 14px;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    text-shadow: none;
+    border: 1px solid #ccc;
+    line-height: 36px;
+    text-align: center;
+    height: 36px;
+    padding: 0 25px;
+    border-radius: 16px;
+    -webkit-transition-duration: 400ms;
+    transition-duration: 400ms;
+    background-color: #fff;
+    color: #999;
+}
+
+.button-box {
+    margin: 0 auto;
+    text-align: center;
+    height: 50px;
+}
+
+.main {
+    font-size: 14px;
+    margin: 0 auto;
+    margin-top: 20vh;
+    width: 80%;
+    height: 40vh;
+    max-width: 500px;
+}
+
+.main h1 {
+    font-size: 18px;
+}
+
+.left {
+    float: left;
+}
+
+.pic {
+    width: 40%;
+    height: auto;
+    float: right;
+}
+
+footer {
+    font-size: 12px;
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+    margin-left: 50%;
+    left: -50%;
+    text-align: center;
+}

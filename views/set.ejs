@@ -6,66 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>love设置</title>
-    <style>
-        body {
-            background: #efdee8;
-        }
-
-        a:link,
-        a:visited,
-        a:hover,
-        a:active {
-            text-decoration: none;
-            color: #333;
-        }
-
-        .main {
-            font-size: 18px;
-            background-color: #ffcccc;
-            box-shadow: -5px 5px 5px #a87091 inset;
-            border-radius: 20px;
-            width: 200px;
-            padding: 20px 30px;
-            margin: auto;
-        }
-
-        .main input {
-            width: 200px;
-            border: 1px solid #ccc;
-            padding: 7px 0px;
-            border-radius: 3px;
-            padding-left: 5px;
-            color: #555555;
-        }
-
-        button,
-        .but {
-            background: #96c2ff;
-            border-radius: 3px;
-            border: none;
-            color: #555555;
-            font-family: Arial;
-            padding: 10px 24px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 13px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
-
-        #link {
-            /* text-align: center; */
-            color: #555555;
-        }
-
-        footer {
-            margin-top: 20px;
-            font-size: 12px;
-            width: 100%;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="/style/set.css">
 </head>
 
 <body>
@@ -88,10 +29,6 @@
             <input type="text" value="饭我做" class="no">
             </br>
             <input type="text" value="菜我烧" class="no">
-            </br>
-            <input type="text" value="衣服我洗" class="no">
-            </br>
-            <input type="text" value="家务我全包" class="no">
             </br>
         </div>
         <button id="add">增加一行</button>
@@ -138,10 +75,12 @@
             })
             console.log(result);
             $.ajax({
-               url: "/set",
-              data: {json : result},
-              type:'POST',
-               success: function (url) {
+                url: "/set",
+                data: {
+                    json: result
+                },
+                type: 'POST',
+                success: function (url) {
                     str = '</br>你的链接:<a class="but" href="' + url + ' " target="_blank">点击跳转并分享</a>';
                     document.getElementById("link").innerHTML = str;
                 }

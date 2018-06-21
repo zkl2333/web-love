@@ -6,64 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>我喜欢你</title>
-  <style>
-    a:link,
-    a:visited,
-    a:hover,
-    a:active {
-      text-decoration: none;
-      color: #333;
-    }
-
-    body {
-      margin: 20px;
-      box-sizing: border-box;
-    }
-
-    button {
-      width: 70px;
-      height: 50px;
-      margin: 0 10%;
-    }
-
-    .button-box {
-      margin: 0 auto;
-      text-align: center
-    }
-
-    .main {
-      font-size: 14px;
-      margin: 0 auto;
-      margin-top: 20vh;
-      width: 80%;
-      height: 200px;
-      max-width: 500px;
-    }
-
-    .main h1 {
-      font-size: 18px;
-    }
-
-    .left {
-      float: left;
-    }
-
-    .pic {
-      width: 40%;
-      height: auto;
-      float: right;
-    }
-
-    footer {
-      font-size: 12px;
-      position: absolute;
-      bottom: 0.5rem;
-      width: 100%;
-      margin-left: 50%;
-      left: -50%;
-      text-align: center;
-    }
-  </style>
+  <link rel="stylesheet" href="/style/love.css">
   <script>
     var ok = "那你就是我家小猪猪了~";
 
@@ -73,9 +16,9 @@
 
     var no = ["房子写你名", "保大", "我妈会游泳", "饭我做", "菜我烧", "衣服我洗", "家务我全包"];
 
-    var result = JSON.parse(<%- json %>);
-    
-    console.log(<%- json %>);
+    var result = JSON.parse(<% - json %>);
+
+    console.log(<% - json %>);
 
     if (result.no != undefined) {
       no = result.no;
@@ -96,10 +39,14 @@
   <div class="main">
     <div class="left">
       <p>
-        <script>document.write(p)</script>
+        <script>
+          document.write(p)
+        </script>
       </p>
       <h1>
-        <script>document.write(h1)</script>
+        <script>
+          document.write(h1)
+        </script>
       </h1>
     </div>
     <img class="pic" src="/1.jpg">
@@ -134,10 +81,11 @@
   var i = 0;
 
   function getmsg(arr) {
-    if (i > l - 1) { i = 0 }
+    if (i > l - 1) {
+      i = 0
+    }
     return arr[i++]
   }
-
 </script>
 
 </html>
