@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>love设置</title>
+    <link rel="stylesheet" href="/style/set.css">
+</head>
+
+<body>
+    <div class="main">
+        <label for="p">第一行小字</label>
+        </br>
+        <input type="text" value="小姐姐我注意你很久了" id="p">
+        </br>
+        <label for="h1">第二行大字</label>
+        </br>
+        <input type="text" value="做我女朋友好吗" id="h1">
+        </br>
+        <label for="ok">点击ok显示的文字</label>
+        </br>
+        <input type="text" value="那你就是我的小猪猪了~" id="ok">
+        </br>
+        <label for="no">点击no显示的文字</label>
+        </br>
+        <div id="input">
+            <input type="text" value="饭我做" class="no">
+            </br>
+            <input type="text" value="菜我烧" class="no">
+            </br>
+        </div>
+        <button id="add">增加一行</button>
+        </br>
+        <button id="but">确定</button>
+        <div id="link"></div>
+    </div>
+    <footer>
+        <b>©</b>
+        <b>
+            <a href="http://www.zkl2333.com">zkl2333</a> 2018</b>
+        <br>
+        <a href="http://www.miitbeian.gov.cn">浙ICP备17004361号-1</a>
+        <!-- 遵纪守法好公民 -->
+    </footer>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        var but = document.querySelector("#but");
+        var add = document.querySelector("#add");
+
+        add.onclick = function () {
+            var e = document.getElementById("input");
+            var node = document.querySelector(".no").cloneNode(true);
+            node.value = "";
+            e.appendChild(node).parentElement.appendChild(document.createElement("br"));
+        }
+
+        but.onclick = function () {
+            var p = escape(document.getElementById("p").value);
+            var h1 = escape(document.getElementById("h1").value);
+            var ok = escape(document.getElementById("ok").value);
+            var no = new Array();
+            for (var i = 0; i < document.querySelectorAll(".no").length; i++) {
+                var v = escape(document.querySelectorAll(".no")[i].value);
+                if (v !== "") {
+                    no.push(v);
+                }
+            }
+            var result = JSON.stringify({
+                'p': p,
+                'h1': h1,
+                'ok': ok,
+                'no': no
+            })
+            console.log(result);
+            $.ajax({
+                url: "/set",
+                data: {
+                    json: result
+                },
+                type: 'POST',
+                success: function (url) {
+                    str = '</br>你的链接:<a class="but" href="' + url + ' " target="_blank">点击跳转并分享</a>';
+                    document.getElementById("link").innerHTML = str;
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

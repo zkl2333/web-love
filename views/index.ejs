@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>我喜欢你</title>
+  <link rel="stylesheet" href="/style/love.css">
+  <script>
+    var ok = "那你就是我家小猪猪了~";
+
+    var p = "小姐姐我关注你很久了~";
+
+    var h1 = "做我女朋友好吗~";
+
+    var no = ["房子写你名", "保大", "我妈会游泳", "饭我做", "菜我烧", "衣服我洗", "家务我全包"];
+
+    var result = JSON.parse(<% - json %>);
+
+    console.log(<% - json %>);
+
+    if (result.no != undefined) {
+      no = result.no;
+    };
+    if (result.ok != undefined) {
+      ok = unescape(result.ok);
+    };
+    if (result.p != undefined) {
+      p = unescape(result.p);
+    };
+    if (result.h1 != undefined) {
+      h1 = unescape(result.h1);
+    };
+  </script>
+</head>
+
+<body>
+  <div class="main">
+    <div class="left">
+      <p>
+        <script>
+          document.write(p)
+        </script>
+      </p>
+      <h1>
+        <script>
+          document.write(h1)
+        </script>
+      </h1>
+    </div>
+    <img class="pic" src="/1.jpg">
+  </div>
+  <div class="button-box">
+    <button id="ok">好</button>
+    <button id="no">不好</button>
+  </div>
+  <footer>
+    <b>©</b>
+    <b>
+      <a href="http://www.zkl2333.com">zkl2333</a> 2018</b>
+    <br>
+    <a href="http://www.miitbeian.gov.cn">浙ICP备17004361号-1</a>
+    <!-- 遵纪守法好公民 -->
+  </footer>
+</body>
+
+<script>
+  const clickOk = document.querySelector('#ok');
+  const clickNo = document.querySelector('#no');
+
+  clickOk.onclick = function () {
+    alert(ok);
+  }
+
+  clickNo.onclick = function () {
+    alert(unescape(getmsg(no)));
+  }
+
+  var l = no.length;
+  var i = 0;
+
+  function getmsg(arr) {
+    if (i > l - 1) {
+      i = 0
+    }
+    return arr[i++]
+  }
+</script>
+
+</html>
