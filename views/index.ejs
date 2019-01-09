@@ -21,22 +21,26 @@
 
     var no = ["房子写你名", "保大", "我妈会游泳", "饭我做", "菜我烧", "衣服我洗", "家务我全包"];
 
-    var result = JSON.parse(<% - json %>);
+    var data = <%- json %>
+    if(data){
 
-    console.log(<% - json %>);
-
-    if (result.no != undefined) {
-      no = result.no;
-    };
-    if (result.ok != undefined) {
-      ok = unescape(result.ok);
-    };
-    if (result.p != undefined) {
-      p = unescape(result.p);
-    };
-    if (result.h1 != undefined) {
-      h1 = unescape(result.h1);
-    };
+      var result = JSON.parse(data);
+  
+      console.log(data);
+  
+      if (result.no != undefined) {
+        no = result.no;
+      };
+      if (result.ok != undefined) {
+        ok = unescape(result.ok);
+      };
+      if (result.p != undefined) {
+        p = unescape(result.p);
+      };
+      if (result.h1 != undefined) {
+        h1 = unescape(result.h1);
+      };
+    }
   </script>
 </head>
 
