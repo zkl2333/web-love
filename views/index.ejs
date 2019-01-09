@@ -7,7 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>我喜欢你</title>
   <link rel="stylesheet" href="/style/love.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/airbrake-js/1.6.2/client.min.js"></script>
   <script>
+    var airbrake = new airbrakeJs.Client({
+      projectId: 209583,
+      projectKey: '47345de4fa232ea9a7337433eebb12c1'
+    });
     var ok = "那你就是我家小猪猪了~";
 
     var p = "小姐姐我关注你很久了~";
