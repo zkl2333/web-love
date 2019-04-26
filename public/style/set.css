@@ -1,78 +1,78 @@
 body {
-    background: #efdee8;
+	background: #efdee8;
 }
 
 a:link,
 a:visited,
 a:hover,
 a:active {
-    text-decoration: none;
-    color: #333;
+	text-decoration: none;
+	color: #333;
 }
 
 .main {
-    font-size: 18px;
-    background-color: #ffcccc;
-    box-shadow: -5px 5px 5px #a87091 inset;
-    border-radius: 20px;
-    width: 200px;
-    padding: 20px 30px;
-    margin: auto;
+	font-size: 18px;
+	background-color: #ffcccc;
+	box-shadow: -5px 5px 5px #a87091 inset;
+	border-radius: 20px;
+	width: 200px;
+	padding: 20px 30px;
+	margin: auto;
 }
 
 .main input {
-    width: 200px;
-    border: 1px solid #ccc;
-    padding: 7px 0px;
-    border-radius: 3px;
-    padding-left: 5px;
-    color: #555555;
+	width: 200px;
+	border: 1px solid #ccc;
+	padding: 7px 0px;
+	border-radius: 3px;
+	padding-left: 5px;
+	color: #555555;
 }
 
 #input input {
-    margin-top: 5px;
+	margin-top: 5px;
 }
 
 button:hover {
-    color: #F77B83;
-    border-color: #F77B83;
-    outline-style: none;
+	color: #f77b83;
+	border-color: #f77b83;
+	outline-style: none;
 }
 
 button {
-    margin-top: 20px;
-    display: inline-block;
-    white-space: nowrap;
-    cursor: pointer;
-    background: #444;
-    letter-spacing: 1px;
-    font-size: 14px;
-    -moz-user-select: -moz-none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-    text-shadow: none;
-    border: 1px solid #ccc;
-    line-height: 36px;
-    text-align: center;
-    height: 36px;
-    padding: 0 25px;
-    border-radius: 16px;
-    -webkit-transition-duration: 400ms;
-    transition-duration: 400ms;
-    background-color: #fff;
-    color: #999;
+	margin-top: 20px;
+	display: inline-block;
+	white-space: nowrap;
+	cursor: pointer;
+	background: #444;
+	letter-spacing: 1px;
+	font-size: 14px;
+	-moz-user-select: -moz-none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	text-shadow: none;
+	border: 1px solid #ccc;
+	line-height: 36px;
+	text-align: center;
+	height: 36px;
+	padding: 0 25px;
+	border-radius: 16px;
+	-webkit-transition-duration: 400ms;
+	transition-duration: 400ms;
+	background-color: #fff;
+	color: #999;
 }
 
 #link {
-    /* text-align: center; */
-    color: #555555;
+	/* text-align: center; */
+	color: #555555;
 }
 
 footer {
-    margin-top: 20px;
-    font-size: 12px;
-    width: 100%;
-    text-align: center;
+	margin-top: 20px;
+	font-size: 12px;
+	width: 100%;
+	text-align: center;
 }
