@@ -7,12 +7,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>我喜欢你</title>
   <link rel="stylesheet" href="/style/love.css">
+  <!-- airbrake -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/airbrake-js/1.6.2/client.min.js"></script>
   <script>
     var airbrake = new airbrakeJs.Client({
       projectId: 209583,
       projectKey: '47345de4fa232ea9a7337433eebb12c1'
     });
+    // airbrake
     var ok = "那你就是我家小猪猪了~";
 
     var p = "小姐姐我关注你很久了~";
@@ -21,13 +23,11 @@
 
     var no = ["房子写你名", "保大", "我妈会游泳", "饭我做", "菜我烧", "衣服我洗", "家务我全包"];
 
-    var data = <%- json %>
-    if(data){
+    var data = '<%- json %>'
+    if (data) {
 
       var result = JSON.parse(data);
-  
-      console.log(data);
-  
+
       if (result.no != undefined) {
         no = result.no;
       };
