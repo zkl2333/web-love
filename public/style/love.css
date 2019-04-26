@@ -5,13 +5,19 @@ a:active {
 	text-decoration: none;
 	color: #333;
 }
+html,
+body {
+	height: 100%;
+}
 
 body {
 	margin: 0;
-	padding: 20px;
+	padding: 0;
 	box-sizing: border-box;
-	min-height: 100vh;
-	position: relative;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
 }
 
 button:hover {
@@ -21,14 +27,14 @@ button:hover {
 }
 
 button {
-	width: 100px;
-	margin: 20px 5vw;
+	width: 1.5rem;
+	margin: 0 0.3rem;
 	display: inline-block;
 	white-space: nowrap;
 	cursor: pointer;
 	background: #444;
 	letter-spacing: 1px;
-	font-size: 14px;
+	font-size: 0.14rem;
 	-moz-user-select: -moz-none;
 	-webkit-user-select: none;
 	-ms-user-select: none;
@@ -36,11 +42,10 @@ button {
 	user-select: none;
 	text-shadow: none;
 	border: 1px solid #ccc;
-	line-height: 36px;
+	line-height: 0.7rem;
 	text-align: center;
-	height: 36px;
-	padding: 0 25px;
-	border-radius: 16px;
+	height: 0.7rem;
+	border-radius: 0.2rem;
 	-webkit-transition-duration: 400ms;
 	transition-duration: 400ms;
 	background-color: #fff;
@@ -48,40 +53,37 @@ button {
 }
 
 .button-box {
-	margin: 0 auto;
 	text-align: center;
-	height: 50px;
 }
 
 .main {
-	font-size: 14px;
-	margin: 0 auto;
-	margin-top: 20vh;
-	width: 80%;
-	height: 40vh;
-	max-width: 500px;
+	display: flex;
+	font-size: 0.14rem;
+	height: 5rem;
+	width: 7rem;
 }
 
 .main h1 {
-	font-size: 18px;
+	font-size: 0.3rem;
+}
+
+.main p {
+	font-size: 0.2rem;
 }
 
 .left {
-	float: left;
+	width: 3.5rem;
 }
 
 .pic {
-	width: 40%;
-	height: auto;
-	float: right;
+	width: 3.5rem;
+	height: 3.5rem;
 }
 
 footer {
-	font-size: 12px;
+	font-size: 0.12rem;
 	position: absolute;
-	bottom: -30px;
+	bottom: 0;
 	width: 100%;
-	margin-left: 50%;
-	left: -50%;
 	text-align: center;
 }
